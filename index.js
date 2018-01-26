@@ -1,11 +1,9 @@
 'use strict';
 
 var https = require('https');
-// add https poxy
 var HttpsProxyAgent = require('https-proxy-agent');
 var proxy = hexo.config.flickr_ext_proxy_config || false;
 var agent = proxy ? new HttpsProxyAgent(proxy) : false;
-//
 var Promise = require('bluebird');
 var hexoUtil = require('hexo-util');
 var tagUtil = require('./flickrTagUtil');
@@ -282,8 +280,7 @@ var promiseRequest_imageSize = function (tagArgs, returnImgAttr) {
       }else{
         // console.log("[cache getSize]photoId= " + tag.id);
         // cache file?
-        console.log('from cache');
-        
+               
         return resolve( addTagHeight(  tagUtil.imgFormat(tag, flJson) , flJson.photo.imgSize ));
       }
       
