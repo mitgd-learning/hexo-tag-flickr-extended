@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-flickr-extended",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A hexo plugin for inserting image from Flickr in Hexo posts",
   "main": "index.js",
   "scripts": {},
