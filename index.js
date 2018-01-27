@@ -331,8 +331,8 @@ hexo.extend.filter.register('after_generate', function(){
  * Syntax:
  * ```
  * photos:
- * - flickr photo_id [size]
- * - flickr photo_id [size]
+ * - flickrExt photo_id [size]
+ * - flickrExt photo_id [size]
  * ```
  */
 hexo.extend.filter.register('pre', function(data) {
@@ -340,7 +340,7 @@ hexo.extend.filter.register('pre', function(data) {
 
   return Promise.map(data.photos, function(photo) {
     var photoTag = photo.split(' ');
-    if (photoTag[0] !== 'flickr') {
+    if (photoTag[0] !== 'flickrExt') {
       return photo;
     }
 
